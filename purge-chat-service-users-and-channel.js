@@ -15,7 +15,7 @@ client.chat.services(chatServiceSid).users.list()
   users.forEach(user => {
     client.chat.services(chatServiceSid).users(user.sid).remove()
     .then(() => {
-        console.log(user.sid + ' removed')
+        console.log('User ' + user.sid + ' removed')
     })
   })
 });
@@ -25,6 +25,6 @@ client.chat.services(chatServiceSid).channels.list()
 .then(channels => {
   channels.forEach(channel => {
     client.chat.services(chatServiceSid).channels(channel.sid).remove()
-    .then(() => console.log('Removed ' + channel.sid))
+    .then(() => console.log('Channel ' + channel.sid + ' removed'))
   })
 });
