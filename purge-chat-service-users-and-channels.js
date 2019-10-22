@@ -1,10 +1,10 @@
 require('dotenv').config();
 const client = require('twilio')(
-  process.env.TWILIO_ACCOUNT_SID,
-  process.env.TWILIO_ACCOUNT_SECRET
+  process.env.SCRIPT_TWILIO_ACCOUNT_SID,
+  process.env.SCRIPT_TWILIO_ACCOUNT_SECRET
 );
 
-const chatServiceSid = ''
+const chatServiceSid = process.argv[2]
 if (!chatServiceSid) {
     console.log('Please specify a chat service id')
 }
